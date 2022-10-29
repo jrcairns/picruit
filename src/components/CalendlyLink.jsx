@@ -3,8 +3,9 @@ import clsx from 'clsx'
 
 export function CalendlyLink({ color = 'black' }) {
   return (
-    <Link
-      href="#"
+    <a
+      target="_blank"
+      href="https://calendly.com/justincairnsuk/15min"
       aria-label="Download on the App Store"
       className={clsx(
         'rounded-lg transition-colors flex items-center py-2 px-4 font-semibold',
@@ -20,6 +21,6 @@ export function CalendlyLink({ color = 'black' }) {
         />
       </svg> */}
       Schedule A Call
-    </Link>
+    </a>
   )
 }

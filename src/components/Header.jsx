@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { CalendlyLink } from '@/components/CalendlyLink'
 import { Logo } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
 
@@ -122,12 +123,10 @@ export function Header() {
                 </>
               )}
             </Popover>
-            <Button href="/login" variant="outline" className="hidden lg:block">
+            {/* <Button href="/login" variant="outline" className="hidden lg:block">
               Log in
-            </Button>
-            <Button href="#" className="hidden lg:block">
-              Download
-            </Button>
+            </Button> */}
+            <CalendlyLink color="black" />
           </div>
         </Container>
       </nav>

@@ -24,23 +24,23 @@ const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Invite friends for better returns',
+    name: 'Schedule an initial call',
     description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
+      'Meet to learn more ∙ Identify your pains ∙ Determine your needs ∙ Receive a proposal',
     icon: DeviceUserIcon,
     screen: InviteScreen,
   },
   {
-    name: 'Notifications on stock dips',
+    name: 'Kickoff your search',
     description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
+      'Create your roadmap ∙ Run your recruiting operations ∙ Appreciate a pipeline of quality talent',
     icon: DeviceNotificationIcon,
     screen: StocksScreen,
   },
   {
-    name: 'Invest what you want',
+    name: 'Build your team',
     description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
+      'Keep filling your open roles ∙ Everyone trusting TA ∙ Meeting your product & sales goals',
     icon: DeviceTouchIcon,
     screen: InvestScreen,
   },
@@ -173,15 +173,16 @@ function InviteScreen({ custom, animated = false }) {
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
         <AppScreen.Title>Confirmed</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white/80 block leading-5">11:00am, Monday, October 31, 2022</span>
+          Initial meeting @ 11:00am, {new Date().toLocaleDateString()}
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
         <div className="px-4 py-6">
-          {/* <div className="space-y-6">
+          <div className="space-y-6">
             {[
-              { label: 'Full name', value: 'Albert H. Wiggin' },
-              { label: 'Email address', value: 'awiggin@chase.com' },
+              { label: 'When', value: `11:00am, ${new Date().toLocaleDateString()}` },
+              { label: 'With', value: 'An onboarding member of our team.' },
+              { label: 'What', value: 'Initial meeting, discuss expectations.' },
             ].map((field) => (
               <div key={field.label}>
                 <div className="text-sm text-gray-500">{field.label}</div>
@@ -190,13 +191,9 @@ function InviteScreen({ custom, animated = false }) {
                 </div>
               </div>
             ))}
-          </div> */}
-          <div className="flex items-center space-x-2">
-            <span className="h-6 w-6 rounded-full bg-cyan-500"></span>
-            <div className="text-xl font-bold">30 Minute Meeting</div>
           </div>
           <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
-            Invite person
+            Set Reminder
           </div>
         </div>
       </MotionAppScreenBody>
@@ -208,82 +205,68 @@ function StocksScreen({ custom, animated = false }) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
+        <AppScreen.Title>Searching</AppScreen.Title>
+        <AppScreen.Subtitle>Pooling candidates across multiple platforms</AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
         <div className="divide-y divide-gray-100">
           {[
             {
-              name: 'Laravel',
+              name: 'Linkedin',
               price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
+              change: '+4.00',
+              color: 'rgb(6 182 212 / 1)',
               logo: LaravelLogo,
             },
             {
-              name: 'Tuple',
+              name: 'Twitter',
               price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
+              change: '-3.00',
+              color: '#d2d2d2',
               logo: TupleLogo,
             },
             {
-              name: 'Transistor',
+              name: 'Indeed',
               price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
-              logo: TransistorLogo,
+              change: '+6.00',
+              color: 'rgb(6 182 212 / 1)',
+              logo: LaravelLogo,
             },
             {
-              name: 'Diageo',
+              name: 'Github',
               price: '250.65',
-              change: '+1.25%',
-              color: '#3320A7',
-              logo: DiageoLogo,
+              change: '+1.00',
+              color: 'rgb(6 182 212 / 1)',
+              logo: LaravelLogo,
             },
             {
-              name: 'StaticKit',
+              name: 'Monster',
               price: '250.65',
-              change: '-3.38%',
-              color: '#2A3034',
-              logo: StaticKitLogo,
+              change: '-3.00',
+              color: 'rgb(6 182 212 / 1)',
+              logo: LaravelLogo,
             },
             {
-              name: 'Statamic',
+              name: 'Internal',
               price: '5,040.85',
-              change: '-3.11%',
-              color: '#0EA5E9',
-              logo: StatamicLogo,
-            },
-            {
-              name: 'Mirage',
-              price: '140.44',
-              change: '+9.09%',
-              color: '#16A34A',
-              logo: MirageLogo,
-            },
-            {
-              name: 'Reversable',
-              price: '550.60',
-              change: '-1.25%',
-              color: '#8D8D8D',
-              logo: ReversableLogo,
+              change: '-3.00',
+              color: 'rgb(6 182 212 / 1)',
+              logo: LaravelLogo,
             },
           ].map((stock) => (
             <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
               <div
-                className="flex-none rounded-full"
+                className="flex-none rounded-full p-1.5"
                 style={{ backgroundColor: stock.color }}
               >
-                <stock.logo className="h-10 w-10" />
+                <stock.logo className="h-5 w-5" />
               </div>
               <div className="flex-auto text-sm text-gray-900">
                 {stock.name}
               </div>
               <div className="flex-none text-right">
                 <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
+                  Candidates
                 </div>
                 <div
                   className={clsx(
@@ -308,47 +291,39 @@ function InvestScreen({ custom, animated = false }) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Confirmed</AppScreen.Title>
+        <AppScreen.Title>Select your hires</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white/80 block leading-5">11:00am, Monday, October 31, 2022</span>
+          Select the best talent for your needs
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
         <div className="px-4 py-6">
           <div className="space-y-4">
             {[
-              { label: 'Number of shares', value: '100' },
-              {
-                label: 'Current market price',
-                value: (
-                  <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+              { value: 'Bertram Gilfoyle', expertise: 'Architecture', experience: 15, interested: true },
+              { value: 'Dinesh Chugtai', expertise: 'Java', experience: 14, interested: true },
+              { value: 'Richard Hendricks', expertise: 'Algorithms', experience: 12, interested: true },
+              { value: 'Erlich Bachman', expertise: 'HTML', experience: 12, interested: false },
+              { value: 'Nelson Bighetti', expertise: 'Mobile Apps', experience: 4, interested: true },
+            ].map(item => (
+              <div key={item.value} className="flex justify-between border-b border-gray-100 pb-4">
+                <div>
+                  <div className="text-sm font-medium">{item.value}</div>
+                  <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <span className="block">{item.expertise}</span>
+                    <span className="block">&bull;</span>
+                    <span className="block">{item.experience} years</span>
                   </div>
-                ),
-              },
-              { label: 'Estimated cost', value: '$3,428.00' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex justify-between border-b border-gray-100 pb-4"
-              >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
-                  {item.value}
                 </div>
-              </div>
+                <div>{item.interested ? (
+                  <span className="bg-gray-100 rounded font-medium px-1.5 py-1 text-xs">Interested</span>
+                ) : (
+                  <span className="bg-gray-300 cursor-not-allowed rounded font-medium px-1.5 py-1 text-xs text-white">Uninterested</span>
+                )}</div>
+              </div>  
             ))}
-            <div className="rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
-              Buy shares
+            <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+              See All
             </div>
           </div>
         </div>
@@ -545,20 +520,17 @@ function FeaturesMobile() {
 export function PrimaryFeatures() {
   return (
     <section
-      id="features"
-      aria-label="Features for investing all your money"
+      id="process"
+      aria-label="process of picruit "
       className="bg-gray-900 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
+            Stop struggling. Start hiring.
           </h2>
           <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+          Ready to make good on the company vision by filling all those open roles? I bet your boss is. You’re just 3 steps away.
           </p>
         </div>
       </Container>

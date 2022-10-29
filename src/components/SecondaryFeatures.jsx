@@ -1,42 +1,43 @@
 import { useId } from 'react'
 
 import { Container } from '@/components/Container'
+import { CalendlyLink } from './CalendlyLink'
 
 const features = [
   {
-    name: 'Invest any amount',
+    name: 'Solid Practices',
     description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
+      'Know how to quickly attract, screen, interview & hire candidates for open positions.',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Build a balanced portfolio',
+    name: 'Constant Flow',
     description:
-      'Invest in different industries to find the most opportunities to win huge.',
+      'Have an always-filled pipeline of qualified candidates to quickly fill open positions.',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Trade in real-time',
+    name: 'Qualified Talent',
     description:
-      'Get insider tips on big stock moves and act on them within seconds.',
+      'Appreciate a curated list of vetted candidates to screen, interview & hire from.',
     icon: DeviceClockIcon,
   },
   {
-    name: 'Profit from your network',
+    name: 'Highly Regarded',
     description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
+      'Become a TA staff praised for finding & hiring the right candidates—when they‘re needed.',
     icon: DeviceListIcon,
   },
   {
-    name: 'Encrypted and anonymized',
+    name: 'Data Driven',
     description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
+      'Access a set of useful metrics* to guide your recruiting & staffing functions. Make decisions based on data —not hunch.',
     icon: DeviceLockIcon,
   },
   {
-    name: 'Portfolio tracking',
+    name: 'Expert Guidance',
     description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
+      'A seasoned expert & set of tools to fill all positions in the company quickly & with great talent.',
     icon: DeviceChartIcon,
   },
 ]
@@ -196,11 +197,10 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
+            Now is the time to build out your team.
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
+          <span className="italic">“We don’t have enough qualified people to interview.”</span> Do you have too many open positions? We’ll help research, source, recruit and more. Everything you need, right up to onboarding.
           </p>
         </div>
         <ul
@@ -220,6 +220,12 @@ export function SecondaryFeatures() {
             </li>
           ))}
         </ul>
+        <div className="mx-auto max-w-2xl sm:text-center mt-16 sm:mt-20">
+          <p className="mt-2 text-lg text-gray-600">
+            <span className="font-bold">*Metrics</span>: Over 10k candidates sourced monthly, hundreds of introductions made, dozens of hires each month… you get the idea.
+          </p>
+          <div className="flex justify-center mt-4"><CalendlyLink color="black" /></div>
+        </div>
       </Container>
     </section>
   )
