@@ -186,7 +186,8 @@ function InviteScreen({ custom, animated = false }) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-600 py-2 px-3 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-gray-100 shadow-inset py-2 px-3 text-center text-sm text-gray-700 border">
+            {/* mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-gray-900 */}
             Set Reminder
           </div>
         </div>
@@ -316,7 +317,7 @@ function InvestScreen({ custom, animated = false }) {
                 )}</div>
               </div>  
             ))}
-            <div className="mt-6 rounded-lg bg-cyan-600 py-2 px-3 text-center text-sm font-semibold text-white">
+            <div className="mt-6 rounded-lg bg-gray-100 shadow-inset py-2 px-3 text-center text-sm text-gray-700 border">
               See All
             </div>
           </div>
