@@ -1,12 +1,9 @@
-import { useId, useRef, useState } from 'react'
+import { useId } from 'react'
 import Image from 'next/future/image'
 import clsx from 'clsx'
-import { motion, useInView, useMotionValue } from 'framer-motion'
-import { InlineWidget, PopupButton } from "react-calendly";
 
 import { AppScreen } from '@/components/AppScreen'
 import { CalendlyLink } from '@/components/CalendlyLink'
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
 import logoBbc from '@/images/logos/bbc.svg'
@@ -91,19 +88,6 @@ function BackgroundIllustration(props) {
     </div>
   )
 }
-
-// function PlayIcon(props) {
-//   return (
-//     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-//       <circle cx="12" cy="12" r="11.5" stroke="#D4D4D4" />
-//       <path
-//         d="M9.5 14.382V9.618a.5.5 0 0 1 .724-.447l4.764 2.382a.5.5 0 0 1 0 .894l-4.764 2.382a.5.5 0 0 1-.724-.447Z"
-//         fill="#A3A3A3"
-//         stroke="#A3A3A3"
-//       />
-//     </svg>
-//   )
-// }
 
 function AppDemo() {
   return (
