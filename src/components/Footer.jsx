@@ -47,7 +47,7 @@ export function Footer() {
             </div>
             <div className="ml-8 lg:w-64">
               <p className="text-base font-semibold text-gray-900">
-                <a target="__blank" href="https://calendly.com/isaacarch">
+                <a target="__blank" rel="noreferrer" href="https://calendly.com/isaacarch">
                   <span className="absolute inset-0 sm:rounded-2xl" />
                   Schedule a call
                 </a>

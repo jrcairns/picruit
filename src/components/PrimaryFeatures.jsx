@@ -521,7 +521,7 @@ export function PrimaryFeatures() {
   return (
     <section
       id="process"
-      aria-label="process of picruit "
+      aria-label="process of picruit"
       className="bg-gray-900 py-20 sm:py-32"
     >
       <Container>

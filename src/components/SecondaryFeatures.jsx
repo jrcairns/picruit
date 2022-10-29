@@ -25,7 +25,7 @@ const features = [
   {
     name: 'Highly Regarded',
     description:
-      'Become a TA staff praised for finding & hiring the right candidates—when they‘re needed.',
+      'Become a TA staff praised for finding & hiring the right candidates—when they`re needed.',
     icon: DeviceListIcon,
   },
   {

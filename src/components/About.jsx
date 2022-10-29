@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container'
+import Image from 'next/image'
 import { CircleBackground } from './CircleBackground'
 
 const people = [
@@ -71,7 +72,7 @@ export function About() {
           {people.map((person) => (
             <li key={person.name} className="rounded-lg bg-gray-800 py-10 px-6 text-center xl:px-10 xl:text-left">
               <div className="space-y-6 xl:space-y-10">
-                <img className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56 object-cover object-top" src={person.imageUrl} alt="" />
+                <Image alt={person.name} layout="fill" className="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56 object-cover object-top" src={person.imageUrl} />
                 <div className="space-y-2 xl:flex xl:items-center xl:justify-between">
                   <div className="space-y-1 text font-medium leading-6">
                     <h3 className="text-white">{person.name}</h3>
@@ -105,7 +106,7 @@ export function About() {
             </li>
           ))}
           <li className="rounded-lg hover:bg-cyan-500/80 cursor-pointer transition-colors duration-300 bg-cyan-500/60 backdrop-blur py-10 px-6 text-center xl:px-10 flex flex-col items-center justify-center">
-            <span className="block text-3xl font-semibold text-white">We're Hiring!</span>
+            <span className="block text-3xl font-semibold text-white">We&apos;re Hiring!</span>
             <a className="underline text-white font-medium text-lg" href="mailto:hello@example.com">Reach out to us</a>
           </li>
         </ul>
