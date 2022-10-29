@@ -9,13 +9,7 @@ import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
 import {
-  DiageoLogo,
   LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
   TupleLogo,
 } from '@/components/StockLogos'
 
@@ -192,7 +186,7 @@ function InviteScreen({ custom, animated = false }) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-cyan-600 py-2 px-3 text-center text-sm font-semibold text-white">
             Set Reminder
           </div>
         </div>
@@ -322,7 +316,7 @@ function InvestScreen({ custom, animated = false }) {
                 )}</div>
               </div>  
             ))}
-            <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+            <div className="mt-6 rounded-lg bg-cyan-600 py-2 px-3 text-center text-sm font-semibold text-white">
               See All
             </div>
           </div>

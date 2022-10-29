@@ -59,23 +59,6 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col items-center border-t border-gray-200 pt-8 pb-12 md:flex-row-reverse md:justify-between md:pt-6">
-          {/* <form onSubmit={subscribe} className="flex w-full justify-center md:w-auto">
-            <div className="w-60 min-w-0 shrink">
-              <input
-                aria-label="Email address"
-                placeholder="Email address"
-                required
-                ref={inputEl}
-                autoComplete="email"
-                type="email"
-                className="block w-full appearance-none rounded-lg border border-gray-200 bg-white py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
-              />
-            </div>
-            <Button type="submit" color="cyan" className="ml-4 flex-none">
-              <span className="hidden lg:inline">Join our newsletter</span>
-              <span className="lg:hidden">Join newsletter</span>
-            </Button>
-          </form> */}
           <p className="text-sm text-gray-500 md:mt-0">
             &copy; Copyright Picruit.com {new Date().getFullYear()}. All rights reserved.
           </p>

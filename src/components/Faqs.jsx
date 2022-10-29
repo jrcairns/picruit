@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
-import { CircleBackground } from './CircleBackground'
 
 const faqs = [
   [
